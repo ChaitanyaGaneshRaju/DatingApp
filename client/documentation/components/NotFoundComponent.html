@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  ListsComponent</li>
+  NotFoundComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/lists/lists.component.ts</code>
+    <code>src/app/_errors/not-found/not-found.component.ts</code>
 </p>
 
 
@@ -95,19 +95,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-lists</code></td>
+                <td class="col-md-9"><code>app-not-found</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./lists.component.css</code></td>
+                <td class="col-md-9"><code>./not-found.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./lists.component.html</code></td>
+                <td class="col-md-9"><code>./not-found.component.html</code></td>
             </tr>
 
 
@@ -160,7 +160,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/lists/lists.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/_errors/not-found/not-found.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -198,7 +198,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/lists/lists.component.ts:12</a></div>
+                            class="link-to-prism">src/app/_errors/not-found/not-found.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -223,11 +223,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-lists&#x27;,
-  templateUrl: &#x27;./lists.component.html&#x27;,
-  styleUrls: [&#x27;./lists.component.css&#x27;]
+  selector: &#x27;app-not-found&#x27;,
+  templateUrl: &#x27;./not-found.component.html&#x27;,
+  styleUrls: [&#x27;./not-found.component.css&#x27;]
 })
-export class ListsComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
 
   constructor() { }
 
@@ -239,13 +239,16 @@ export class ListsComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;lists works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;h1&gt;Not found&lt;/h1&gt;
+  &lt;button class&#x3D;&quot;btn btn-info btn-lg&quot; routerLink&#x3D;&quot;/&quot;&gt; Return to home page &lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./lists.component.css</code>
+                    <code>./not-found.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -275,10 +278,10 @@ export class ListsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>lists works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <h1>Not found</h1>  <button class="btn btn-info btn-lg" routerLink="/"> Return to home page </button></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ListsComponent', 'selector': 'app-lists'},{'name': 'MemberDetailComponent', 'selector': 'app-member-detail'},{'name': 'MemberListComponent', 'selector': 'app-member-list'},{'name': 'MessagesComponent', 'selector': 'app-messages'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ServerErrorComponent', 'selector': 'app-server-error'},{'name': 'TestErrorsComponent', 'selector': 'app-test-errors'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ListsComponent'};
+    var ACTUAL_COMPONENT = {'name': 'NotFoundComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -324,7 +327,7 @@ export class ListsComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ListsComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'NotFoundComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

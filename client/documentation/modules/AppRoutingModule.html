@@ -79,6 +79,9 @@ import { ListsComponent } from &#x27;./lists/lists.component&#x27;;
 import { MemberDetailComponent } from &#x27;./members/member-detail/member-detail.component&#x27;;
 import { MemberListComponent } from &#x27;./members/member-list/member-list.component&#x27;;
 import { MessagesComponent } from &#x27;./messages/messages.component&#x27;;
+import { NotFoundComponent } from &#x27;./_errors/not-found/not-found.component&#x27;;
+import { ServerErrorComponent } from &#x27;./_errors/server-error/server-error.component&#x27;;
+import { TestErrorsComponent } from &#x27;./_errors/test-errors/test-errors.component&#x27;;
 import { AuthGuard } from &#x27;./_guards/auth.guard&#x27;;
 
 const routes: Routes &#x3D; [
@@ -94,7 +97,10 @@ const routes: Routes &#x3D; [
       { path: &#x27;messages&#x27;, component: MessagesComponent },
     ]
   },
-  { path: &#x27;**&#x27;, component: HomeComponent, pathMatch: &#x27;full&#x27; }
+  {path:&#x27;errors&#x27;,component:TestErrorsComponent},
+  {path:&#x27;not-found&#x27;,component:NotFoundComponent},
+  {path:&#x27;server-error&#x27;,component:ServerErrorComponent},
+  { path: &#x27;**&#x27;, component: NotFoundComponent, pathMatch: &#x27;full&#x27; }
 ];
 
 @NgModule({

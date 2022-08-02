@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content guard">
+               <div class="content interceptor">
                    <div class="content-data">
 
 
@@ -39,10 +39,9 @@
 
 
 
-
 <ol class="breadcrumb">
-    <li>Guards</li>
-    <li >AuthGuard</li>
+  <li>Interceptors</li>
+  <li >ErrorInterceptor</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,20 +54,18 @@
 </ul>
 
 <div class="tab-content">
-        <div class="tab-pane fade active in" id="c-info">
-            <p class="comment">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
             <h3>File</h3>
-            </p>
-            <p class="comment">
-                <code>src/app/_guards/auth.guard.ts</code>
-            </p>
+        </p>
+        <p class="comment">
+            <code>src/app/_interceptors/error.interceptor.ts</code>
+        </p>
 
 
 
 
-
-
-                <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -82,7 +79,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#canActivate" >canActivate</a>
+                                <a href="#intercept" >intercept</a>
                             </li>
                         </ul>
                     </td>
@@ -96,18 +93,18 @@
     </table>
 </section>
 
-                <section>
+            <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(accountService: <a href="../injectables/AccountService.html" target="_self">AccountService</a>, toastr: ToastrService)</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, toastr: ToastrService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/_guards/auth.guard.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/_interceptors/error.interceptor.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -125,10 +122,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>accountService</td>
+                                                        <td>router</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/AccountService.html" target="_self" >AccountService</a></code>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -157,7 +154,7 @@
         </table>
 </section>
 
-                <section>
+            <section>
     
     <h3 id="methods">
         Methods
@@ -166,24 +163,24 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="canActivate"></a>
+                    <a name="intercept"></a>
                     <span class="name">
-                        <span ><b>canActivate</b></span>
-                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>intercept</b></span>
+                        <a href="#intercept"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>canActivate()</code>
+<code>intercept(request: HttpRequest<>, next: <a href="https://angular.io/api/common/http/HttpHandler" target="_blank">HttpHandler</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/_guards/auth.guard.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/_interceptors/error.interceptor.ts:17</a></div>
                 </td>
             </tr>
 
@@ -192,45 +189,125 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>request</td>
+                                    <td>
+                                            <code>HttpRequest&lt;&gt;</code>
+                                    </td>
 
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>next</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/common/http/HttpHandler" target="_blank" >HttpHandler</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;HttpEvent&lt;&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </section>
-        </div>
+
+    </div>
 
 
-        <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from &#x27;@angular/router&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
-import { AccountService } from &#x27;../_services/account.service&#x27;;
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import {
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpInterceptor
+} from &#x27;@angular/common/http&#x27;;
+import { catchError, Observable, throwError } from &#x27;rxjs&#x27;;
+import { NavigationExtras, Router } from &#x27;@angular/router&#x27;;
 import { ToastrService } from &#x27;ngx-toastr&#x27;;
-import { map } from &#x27;rxjs/operators&#x27;;
 
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class AuthGuard implements CanActivate {
-  constructor(private accountService: AccountService, private toastr: ToastrService) {}
+@Injectable()
+export class ErrorInterceptor implements HttpInterceptor {
 
-  canActivate(): Observable&lt;boolean&gt; {
-    return this.accountService.currentUser$.pipe(
-      map(user &#x3D;&gt; {
-        if (user) return true;
-        this.toastr.error(&#x27;You shall not pass!&#x27;)
-        return false;
+  constructor(private router:Router, private toastr:ToastrService) {}
+
+  intercept(request: HttpRequest&lt;unknown&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;unknown&gt;&gt; {
+    return next.handle(request).pipe(
+      catchError(error&#x3D;&gt;{
+        if(error){
+          switch (error.status) {
+            case 400:
+              if(error.error.errors){
+                const modalStateErrors &#x3D; [];
+                for(const key in error.error.errors){
+                  if(error.error.errors[key]){
+                    modalStateErrors.push(error.error.errors[key]);
+                  }
+                }
+                throw modalStateErrors.flat();
+              } else {
+                this.toastr.error(error.statusText,error.status);
+              }
+              break;
+            case 401:
+              this.toastr.error(error.statusText,error.status);
+              break;
+            case 404:
+              this.router.navigateByUrl(&#x27;/not-found&#x27;);
+              break;
+            case 500:
+              const navigationExtras:NavigationExtras &#x3D; {
+                state: {error: error.error}
+              };
+              this.router.navigateByUrl(&#x27;/server-error&#x27;,navigationExtras);
+              break;
+
+            default:
+              this.toastr.error(&quot;Something unexpected went wrong&quot;);
+              console.log(error);
+              break;
+          }
+        }
+        return throwError(error)
       })
-    )
+    );
   }
-
 }
 </code></pre>
-        </div>
+    </div>
 </div>
+
 
 
 
@@ -267,8 +344,8 @@ export class AuthGuard implements CanActivate {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthGuard.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interceptor';
+            var COMPODOC_CURRENT_PAGE_URL = 'ErrorInterceptor.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
